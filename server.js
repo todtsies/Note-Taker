@@ -74,6 +74,6 @@ app.delete("/api/notes/:id", function (req, res) {
 // LISTENER
 // The below code effectively "starts" our server
 app.listen(PORT, function () {
-    console.log("App listening on PORT: " + PORT);
+    console.log(`Server listening on: http://localhost:${PORT}`);
 });
 
