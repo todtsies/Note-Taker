@@ -22,8 +22,6 @@
   ## Demo
 
   ![Application Preview](public/assets/Note-Taker.gif)
-
-  To view the full demo, please direct yourself to ```assests``` folder.
   
 
   ## Installation
