@@ -1,15 +1,19 @@
+// Require dependencies
 const express = require("express");
 const path = require("path");
 const fs = require("fs");
 
+// Initialize Express package
 const app = express();
 const PORT = process.env.PORT || 8081;
 const mainDir = path.join(__dirname, "/public");
 
+// Set up data parsing
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
+// ROUTES TO HTML AND API DATA
 app.get("/notes", function(req, res) {
     res.sendFile(path.join(mainDir, "notes.html"));
 });
@@ -39,6 +43,7 @@ app.post("/api/notes", function(req, res) {
     res.json(savedNotes);
 })
 
+// Delete note function
 app.delete("/api/notes/:id", function(req, res) {
     let savedNotes = JSON.parse(fs.readFileSync("./db/db.json", "utf8"));
     let noteID = req.params.id;
@@ -53,6 +58,7 @@ app.delete("/api/notes/:id", function(req, res) {
         newID++;
     }
 
+    // Write new notes to db.json file
     fs.writeFileSync("./db/db.json", JSON.stringify(savedNotes));
     res.json(savedNotes);
 })

@@ -21,7 +21,7 @@
 
   ## Demo
 
-  ![Application Preview](public/assets/Note-Taker.gif)
+  ![Application Preview](public/assets/Note-Taker1.gif)
   
 
   ## Installation
