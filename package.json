@@ -1,14 +1,14 @@
 {
   "name": "note-taker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Note taking application using an Express.js back end that saves and retrieves note data from a JSON file.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
   "author": "Emily B. Todt",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.16.4"
   }
